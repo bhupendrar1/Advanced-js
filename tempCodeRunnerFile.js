@@ -1,2 +1,1 @@
-
-let welcome = name => `welcome ${name}`;
+ // console.log("constructor : Employee");
