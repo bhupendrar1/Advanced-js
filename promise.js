@@ -36,7 +36,7 @@
 // console.log(prom(true));
 
 
-// Create function for each condition  & settimeout method
+// Create function for each condition  & setTimeout method
 
 
 // function prom(complete){
