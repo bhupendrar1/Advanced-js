@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-Await</title>
+</head>
+<body>
+  <script>
+    // async function test() {
+    //   return "Hello";  
+    // } 
+ 
+    // test().then((result) => {
+    //     console.log("result");
+    // });
+     
+
+    // let test = async () =>  "hello world";
+    // test().then((result) => {
+    //     console.log(result); 
+    // });
+
+
+
+     /// AWAIT METHHOD
+
+//       async function test() {
+//         console.log("2 : Message");
+//         console.log("3 : Message");
+//         console.log("4 : Message");
+//       } 
+//  // all run sequencely 1 to 5
+//       console.log("1 : Message");
+//       test();
+//       console.log("5 : Message");
+      
+
+    //   async function test() {
+    //     console.log("2 : Message");
+    //     await console.log("3 : Message");
+    //     console.log("4 : Message");
+    //   } /// await change the sequence
+    //   console.log("1 : Message");
+    //   test();
+    //   console.log("5 : Message");
+      
+
+//     async function test() {
+//         console.log("2 : Message");
+//         const response = await fetch("json/student_data.json");
+//         console.log("3 : Message");
+//         const students = await response.json();
+
+//         return students;
+//     }
+  
+//     console.log("1 : Message");
+//    let a =  test();
+//     console.log("4 : Message");
+//     console.log(a);
+
+
+// using then & catch method
+
+//  async function test() {
+//      // method 1
+//         // const response = await fetch("json/student_data.json");
+//         // const students = await response.json();   // method 1
+//         // return students;
+
+//         // mehtod 2 one line code
+//      return (await fetch("json/student_data.json")).json();   //json format data return  
+//     }
+
+//      test().then((res) => {
+//    console.log(res);
+   
+//      }).catch((error) => {
+//       console.log(error);
+//      })
+
+
+
+/// error handling 
+
+async function test() {
+      try{
+ const response = await fetch("json/student_data.json");
+        const students = await response.json();  
+
+        return students;
+      }catch(error){
+      console.log(error);
+      }
+
+    }
+     test().then((res) => {
+   console.log(res);
+   
+     });  
+   
+    
+  </script>
+</body>
+</html>
